@@ -1,13 +1,13 @@
 ﻿namespace CodeTest.Calculator.Operations
 {
-    public class Addition : BaseOperation
-    { 
+    public class MultiplicationOperation : BaseOperation
+    {
         public override int Calculate(params int[] values)
         {
-            int response = 0;
+            int response = 1;
             foreach (var item in values)
             {
-                response += item;
+                response *= item;
             }
 
             return response;

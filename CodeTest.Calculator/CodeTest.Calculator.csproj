@@ -41,15 +41,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Calculator.cs" />
+    <Compile Include="Enums\TypeOperationEnum.cs" />
     <Compile Include="Factory\BaseFactory.cs" />
     <Compile Include="Factory\OperationFactory.cs" />
     <Compile Include="Interfaces\IOperation.cs" />
     <Compile Include="Operations\BaseOperation.cs" />
-    <Compile Include="Operations\Division.cs" />
-    <Compile Include="Operations\Invalid.cs" />
-    <Compile Include="Operations\Multiplication.cs" />
-    <Compile Include="Operations\Substraction.cs" />
-    <Compile Include="Operations\Addition.cs" />
+    <Compile Include="Operations\DivisionOperation.cs" />
+    <Compile Include="Operations\MultiplicationOperation.cs" />
+    <Compile Include="Operations\SubstractionOperation.cs" />
+    <Compile Include="Operations\AdditionOperation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
