@@ -1,13 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CodeTest.Vectors
 {
     public class VectorService
     {
-        //Add mising method
+        public List<int> Filter(List<int> elements)
+        {
+            if (elements.Count == 0 || elements.All(x => x % 2 != 0))
+                return new List<int> { 0 };
+
+            var newList = elements.Where(x => x % 2 == 0).ToList();
+            newList.Add(newList.Count);
+
+            return newList;
+        }
     }
 }

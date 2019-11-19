@@ -41,6 +41,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Calculator.cs" />
+    <Compile Include="Factory\BaseFactory.cs" />
+    <Compile Include="Factory\OperationFactory.cs" />
+    <Compile Include="Interfaces\IOperation.cs" />
+    <Compile Include="Operations\BaseOperation.cs" />
+    <Compile Include="Operations\Division.cs" />
+    <Compile Include="Operations\Invalid.cs" />
+    <Compile Include="Operations\Multiplication.cs" />
+    <Compile Include="Operations\Substraction.cs" />
+    <Compile Include="Operations\Addition.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

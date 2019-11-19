@@ -1,60 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using CodeTest.Calculator.Factory;
 
 namespace CodeTest.Calculator
 {
-    public class Addition
-    {
-        public static int Calculate(int operand1, int operand2)
-        {
-            return operand1 + operand2;
-        }
-    }
 
-    public class Substraction
-    {
-        public static int Calculate(int operand1, int operand2)
-        {
-            return operand1 - operand2;
-        }
-    }
-
-    public class Multiplication
-    {
-        public static int Calculate(int operand1, int operand2)
-        {
-            return operand1 * operand2;
-        }
-    }
-    
-    public class Division
-    {
-        public static int Calculate(int operand1, int operand2)
-        {
-            return operand1 / operand2;
-        }
-    }
-    
     public class Calculator
     {
         public static int Operation(int operand1, int operand2, string operation)
         {
-            switch (operation)
-            {
-                case "add":
-                    return Addition.Calculate(operand1, operand2);
-                case "substract":
-                    return Substraction.Calculate(operand1, operand2);
-                case "multiplication":
-                    return Multiplication.Calculate(operand1, operand2);
-                case "division":
-                    return Division.Calculate(operand1, operand2);
-                default:
-                    return 0;
-            }
+            var operationFactory = new OperationFactory();
+            var opera = operationFactory.Fabricate(operation);
+            return opera.Calculate(operand1, operand2);
         }
     }
 }
