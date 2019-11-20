@@ -9,19 +9,19 @@ namespace CodeTest.Calculator.Factory
     {
         public override IOperation Fabricate(string operation)
         {
-            Enum.TryParse(operation, true, out TypeOperationEnum op);
+            Enum.TryParse(operation, true, out EnumTypeOperation op);
 
             switch (op)
             {
-                case TypeOperationEnum.Add:
+                case EnumTypeOperation.Add:
                     return new AdditionOperation();
-                case TypeOperationEnum.Substract:
+                case EnumTypeOperation.Substract:
                     return new SubstractionOperation();
-                case TypeOperationEnum.Multiplication:
+                case EnumTypeOperation.Multiplication:
                     return new MultiplicationOperation();
-                case TypeOperationEnum.Division:
+                case EnumTypeOperation.Division:
                     return new DivisionOperation();
-                case TypeOperationEnum.None:
+                case EnumTypeOperation.None:
                 default:
                     return null;
             }

@@ -1,7 +1,7 @@
 ﻿
 namespace CodeTest.Calculator.Enums
 {
-    enum TypeOperationEnum
+    enum EnumTypeOperation
     {
         None = 0,
         Add = 1,

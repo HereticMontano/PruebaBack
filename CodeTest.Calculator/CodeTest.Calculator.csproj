@@ -41,7 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Calculator.cs" />
-    <Compile Include="Enums\TypeOperationEnum.cs" />
+    <Compile Include="Enums\EnumTypeOperation.cs" />
     <Compile Include="Factory\BaseFactory.cs" />
     <Compile Include="Factory\OperationFactory.cs" />
     <Compile Include="Interfaces\IOperation.cs" />
