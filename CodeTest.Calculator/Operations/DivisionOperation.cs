@@ -2,13 +2,14 @@
 {
     public class DivisionOperation : BaseOperation
     {
-        public override int Calculate(params int[] values)
+        public override int Calculate(int firstValue, params int[] values)
         {
-            int response = values[0];
-            for (int i = 1; i < values.Length; i++)
+            int response = firstValue;
+            foreach (var item in values)
             {
-                response = response / values[i];
+                response /= item;
             }
+            
             return response;
         }
     }

@@ -2,9 +2,9 @@
 {
     public class MultiplicationOperation : BaseOperation
     {
-        public override int Calculate(params int[] values)
+        public override int Calculate(int firstValue, params int[] values)
         {
-            int response = 1;
+            int response = firstValue;
             foreach (var item in values)
             {
                 response *= item;
