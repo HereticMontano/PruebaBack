@@ -7,11 +7,9 @@ namespace CodeTest.Calculator.Factory
 {
     public class OperationFactory : BaseFactory<IOperation>
     {
-        public override IOperation Fabricate(string operation)
+        public override IOperation Fabricate(EnumTypeOperation operation)
         {
-            Enum.TryParse(operation, true, out EnumTypeOperation op);
-
-            switch (op)
+            switch (operation)
             {
                 case EnumTypeOperation.Add:
                     return new AdditionOperation();
